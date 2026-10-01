@@ -1,0 +1,13 @@
+# directories
+.vscode
+
+# file types
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.pdf
+*.synctex.gz
+*.out
+
+# specific files

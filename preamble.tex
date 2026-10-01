@@ -1,0 +1,124 @@
+\documentclass[answers, letterpaper, 12pt]{exam}
+
+% Packages
+% \usepackage{amsmath}
+% \usepackage[toc,page]{appendix}
+% \usepackage{caption}
+% \usepackage{enumitem}
+% \usepackage{graphicx}
+% \usepackage{hyperref}
+% \usepackage{listings}
+% \usepackage{listingsutf8}
+% \usepackage{lmodern}
+% \usepackage{mdframed}
+\usepackage{newtxmath}
+\usepackage{newtxtext}
+% \usepackage[super]{nth}
+% \usepackage{pxfonts}
+% \usepackage{tikz}
+% \usepackage{verbatim}
+% \usepackage{xcolor}
+
+% Document Setup
+% documentclass exam
+\unframedsolutions{}
+\renewcommand{\solutiontitle}{}
+
+% Setup question formats
+\newcommand{\ProblemPrefix}{1}
+\renewcommand{\questionlabel}{\textbf{Problem \ProblemPrefix-\thequestion}.\quad}
+\nopointsinmargin{}
+\renewcommand{\questionshook}{%
+    \setlength{\leftmargin}{0pt}%
+    \setlength{\itemindent}{\labelwidth}%
+    \addtolength{\itemindent}{\labelsep}%
+    \def\question[##1]##2{%
+        \item {##2 (##1 points)}%
+        \label{question\thequestion}%
+        \par\vspace*{4pt}\noindent\ignorespaces%
+    }%
+}
+
+% Header setup
+\pagestyle{headandfoot}
+\headrule{}
+\setlength{\headheight}{50pt}
+\voffset=-15pt
+
+\header{University of Massachusetts Dartmouth\\
+        CIS 5XX:\@ Course Title\\
+        Instructor: Dr.\ John Doe}
+       {}
+       {\textbf{Homework \#\#}\\
+        Day, January 1, 202X\\
+        Student: Matthew Shane}
+
+% Math commands
+% \newcommand\abs[1]{\left| #1 \right|}
+
+% hyperlinks
+% \hypersetup{hidelinks, frenchlinks=true}
+
+% custom colors
+% \definecolor{light-gray}{gray}{0.95}
+% \definecolor{codegreen}{rgb}{0,0.6,0}
+% \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+% \definecolor{codepurple}{HTML}{C42043}
+% \definecolor{backcolor}{HTML}{F2F2F2}
+
+% listings setup
+% \lstset{upquote=true}
+% \lstdefinestyle{code}{
+%     backgroundcolor=\color{backcolor},   
+%     commentstyle=\color{codegreen},
+%     keywordstyle=\color{codepurple},
+%     numberstyle=\numberstyle,
+%     stringstyle=\color{codegray},
+%     basicstyle=\footnotesize\ttfamily,
+%     breakatwhitespace=false,
+%     breaklines=true,
+%     captionpos=b,
+%     keepspaces=true,
+%     numbers=left,
+%     numbersep=10pt,
+%     showspaces=false,
+%     showstringspaces=false,
+%     showtabs=false,
+% }
+% \lstset{style=code}
+
+% custom command for left padding zeroes
+% \newcommand\numberstyle[1]{%
+%     \footnotesize
+%     \color{codegray}%
+%     \ttfamily
+%     \ifnum#1<10 0\fi#1 |%
+% }
+
+% Custom command for code files
+% Usage:
+%   \codefile{language}{file path}[
+%     morekeywords = {...},
+%     deletekeywords = {...}
+%   ]
+% \NewDocumentCommand{\codefile}{m m O{} O{}}{%
+%     \lstinputlisting[
+%         language=#1,
+%         morekeywords={#3},
+%         deletekeywords={#4},
+%         framesep=8pt,
+%         xleftmargin=40pt,
+%         framexleftmargin=40pt,
+%         frame=tb,
+%         framerule=0pt
+%     ]{#2}%
+% }
+
+% Custom command for inline code samples
+% Usage:
+%   \codeinline{language}{code}
+% \NewDocumentCommand{\codeinline}{m m}{%
+%     \lstinline[
+%         language=#1
+%     ]|#2|%
+% }
